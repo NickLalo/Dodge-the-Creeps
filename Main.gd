@@ -5,8 +5,11 @@ var score
 
 func _ready():
 	randomize()
+	$"Particles2D".show()
+	$"Music".play()
 
 func game_over():
+	$"DeathSound".play()
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$HUD.show_game_over()
